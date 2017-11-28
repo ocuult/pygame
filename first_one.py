@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 background_image_filename = 'sushiplate.jpg'
-mouse_image_filename = 'fugu.png'
+mouse_image_filename = 'fugu1.png'
 # 指定图像文件名称
 
 import pygame
@@ -17,7 +17,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((512, 288), 0, 32)
 # 创建了一个窗口
-pygame.display.set_caption("Hello, World!")
+pygame.display.set_caption("你好!")
 # 设置窗口标题
 
 background = pygame.image.load(background_image_filename).convert()
@@ -34,7 +34,8 @@ while True:
 
     screen.blit(background, (0, 0))
     # 将背景图画上去
-
+    pygame.mouse.set_visible(False)
+    # 隐藏鼠标
     x, y = pygame.mouse.get_pos()
     # 获得鼠标位置
     x -= mouse_cursor.get_width() / 2
